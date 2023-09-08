@@ -1,0 +1,196 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700|Lato:400,700);
+
+@media (max-width: 512px) {
+  body header h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 512px) {
+  main section h2 {
+    font-size: 15px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: auto; /* eller 0 */
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: 600;
+  background-image: repeating-linear-gradient(
+    to right,
+    #0109f1,
+    #ee4b2b 10%,
+    #190cd3 20%
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+h1,
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  list-style-type: none;
+}
+
+.test-grid {
+  display: grid;
+  text-align: center;
+  gap: 1.5rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsiva columner, dvs när man minskar fönstret, auto-adjust based on available space. Min 200px expand equally 1fr */
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+.test-grid p {
+  font-size: 15px;
+  border-color: black;
+  border-right: none;
+  border-left: none;
+  border-width: 0.1rem;
+  text-align: center;
+}
+
+.test-grid2 {
+  display: grid;
+  grid-template-columns: 0fr;
+  grid-template-rows: 1fr;
+  gap: 5%;
+  padding-block: 2rem;
+  margin-inline: left;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  outline: 0;
+  color: black;
+}
+
+.pseudo-section:hover {
+  cursor: pointer;
+  background-color: rgba(211, 211, 211, 0.7);
+  color: black;
+  border-radius: 3%;
+  border-color: lightslategray;
+  transition-duration: 1s;
+}
+
+header {
+  text-transform: uppercase;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+
+  /* z-index: 0;
+  overflow-x: hidden;
+  color: #212121;
+  /* border-style: solid; ringen runt hela, samband med border radius
+  border-radius: 50%;
+  border-color: royalblue; */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://wallpapers.com/images/hd/mobile-up-movie-house-u17zor21hd8kjm2p.jpg"),
+    url("");
+  background-blend-mode: lighten, screen;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, top;
+  z-index: -1;
+  opacity: 0.55;
+}
+
+/* KOD FÖR ID'N PHOTOS */
+
+/* #photos img {
+  height: 300px;
+  padding: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+} */
+
+/* UTKOMMENTERAD FLEX, TESTAR GRID ISTÄLLET */
+/* .my-section {
+  display: flex; Kan också ha inline-block för att ha dom bredvid 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem; 
+  position: relative;
+  z-index: 1; 
+  text-transform: uppercase;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600; 
+}  */
+
+/* ALTERNATIV TVÅ */
+
+/* * {
+    box-sizing: border-box;
+    margin:auto;
+    padding: 0;
+}
+
+.my-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    padding: 1rem;
+
+}
+
+body {
+    background-image: url("https://wallpapers.com/images/hd/mobile-up-movie-house-u17zor21hd8kjm2p.jpg"), url("UP.webp");
+    background-repeat: no-repeat;
+    background-size:cover;
+    max-width: fit-content;
+    max-height: fit-content;
+    background-blend-mode:lighten;
+    background-position:center;
+    filter:blur()
+} */
